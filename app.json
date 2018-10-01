@@ -1,0 +1,31 @@
+{
+  "name": "emis-feature",
+  "description": "WIP",
+  "repository": "https://github.com/CodeTanzania/emis-feature.git",
+  "keywords": [
+    "codetanzania",
+    "emis",
+    "emis-module",
+    "emergency",
+    "risk",
+    "geojson",
+    "feature",
+    "point",
+    "linestring",
+    "polygon"
+  ],
+  "addons": [
+    "mongolab"
+  ],
+  "env":
+  {
+    "NPM_CONFIG_PRODUCTION":
+    {
+      "value": "false"
+    },
+    "YARN_PRODUCTION":
+    {
+      "value": "false"
+    }
+  }
+}
