@@ -67,6 +67,9 @@ It will be nice, if you open an issue first so that we can know what is going on
 - [OSM - Features](https://wiki.openstreetmap.org/wiki/Features)
 - [Geographic Information System](https://en.wikipedia.org/wiki/Geographic_information_system)
 
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2018 CodeTanzania & Contributors
