@@ -54,9 +54,11 @@ It will be nice, if you open an issue first so that we can know what is going on
 
 
 ## References
-- [Disaster](https://en.wikipedia.org/wiki/Disaster)
-
-## Licence
+- [geojson.org](http://geojson.org/)
+- [IETF - The GeoJSON Format](https://tools.ietf.org/html/rfc7946)
+- [GeoJSON Wikipedia](https://en.wikipedia.org/wiki/GeoJSON)
+- [More than you ever wanted to know about GeoJSON](https://macwright.org/2015/03/23/geojson-second-bite.html)
+- [MongoDB - GeoJSON Objects](https://docs.mongodb.com/manual/reference/geojson/)
 
 The MIT License (MIT)
 
