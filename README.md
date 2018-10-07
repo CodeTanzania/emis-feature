@@ -4,7 +4,11 @@
 [![Dependencies Status](https://david-dm.org/CodeTanzania/emis-feature/status.svg?style=flat-square)](https://david-dm.org/CodeTanzania/emis-feature)
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/CodeTanzania/emis-feature/tree/develop)
 
-> WIP
+A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).
+
+## Domain Model
+
+![EMIS Feature Domain Model](https://raw.githubusercontent.com/CodeTanzania/emis-feature/develop/specifications/featurev0.1.0.png)
 
 ## Requirements
 
@@ -59,6 +63,9 @@ It will be nice, if you open an issue first so that we can know what is going on
 - [GeoJSON Wikipedia](https://en.wikipedia.org/wiki/GeoJSON)
 - [More than you ever wanted to know about GeoJSON](https://macwright.org/2015/03/23/geojson-second-bite.html)
 - [MongoDB - GeoJSON Objects](https://docs.mongodb.com/manual/reference/geojson/)
+- [OSM - Map Features](https://wiki.openstreetmap.org/wiki/Map_Features)
+- [OSM - Features](https://wiki.openstreetmap.org/wiki/Features)
+- [Geographic Information System](https://en.wikipedia.org/wiki/Geographic_information_system)
 
 The MIT License (MIT)
 

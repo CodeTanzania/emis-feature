@@ -1,6 +1,6 @@
 {
   "name": "emis-feature",
-  "description": "WIP",
+  "description": "A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).",
   "repository": "https://github.com/CodeTanzania/emis-feature.git",
   "keywords": [
     "codetanzania",

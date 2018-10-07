@@ -1,7 +1,7 @@
 {
   "name": "@codetanzania/emis-feature",
   "version": "1.0.0",
-  "description": "WIP",
+  "description": "A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).",
   "main": "index.js",
   "scripts": {
     "test": "grunt test",
@@ -18,19 +18,19 @@
     "emis-module",
     "emergency",
     "risk",
+    "disaster",
+    "hazard",
     "geojson",
     "feature",
     "point",
     "linestring",
     "polygon"
   ],
-  "contributors": [
-    {
-      "name": "lykmapipo",
-      "email": "lallyelias87@gmail.com",
-      "url": "https://github.com/lykmapipo"
-    }
-  ],
+  "contributors": [{
+    "name": "lykmapipo",
+    "email": "lallyelias87@gmail.com",
+    "url": "https://github.com/lykmapipo"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodeTanzania/emis-feature/issues",
@@ -42,21 +42,19 @@
     "apiDoc": "https://codetanzania.github.io/emis-feature/",
     "client_id": "",
     "client_secret": "",
-    "urls": [
-      {
-        "resource": "IncidentType",
-        "link": "https://emis-feature.herokuapp.com/v1/features",
-        "scopes": [
-          "feature:*"
-        ],
-        "methods": [
-          "get",
-          "post",
-          "put",
-          "patch"
-        ]
-      }
-    ]
+    "urls": [{
+      "resource": "IncidentType",
+      "link": "https://emis-feature.herokuapp.com/v1/features",
+      "scopes": [
+        "feature:*"
+      ],
+      "methods": [
+        "get",
+        "post",
+        "put",
+        "patch"
+      ]
+    }]
   },
   "devDependencies": {
     "@benmaruchu/faker": "^4.2.1",
@@ -68,15 +66,15 @@
     "grunt-mocha-test": "^0.13.3",
     "jshint-stylish": "^2.2.1",
     "mocha": "^5.2.0",
-    "mongoose": "^5.3.0",
-    "sinon": "^6.3.4",
+    "mongoose": "^5.3.1",
+    "sinon": "^6.3.5",
     "sinon-chai": "^3.2.0",
     "sinon-mongoose": "^2.2.1",
     "superagent": "^4.0.0-beta.5",
     "supertest": "^3.3.0"
   },
   "dependencies": {
-    "@codetanzania/majifix-common": "^0.10.0",
+    "@codetanzania/majifix-common": "^0.11.0",
     "@lykmapipo/express-common": "^0.9.1",
     "async": "^2.6.1",
     "express": "^4.16.3",
