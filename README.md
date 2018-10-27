@@ -8,7 +8,7 @@ A representation of geographical feature of interest(i.e mapped physical element
 
 ## Domain Model
 
-![EMIS Feature Domain Model](https://raw.githubusercontent.com/CodeTanzania/emis-feature/develop/specifications/featurev0.1.0.png)
+![EMIS Feature Domain Model](https://raw.githubusercontent.com/CodeTanzania/emis-feature/develop/specifications/feature.model.png)
 
 ## Requirements
 
