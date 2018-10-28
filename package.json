@@ -16,15 +16,23 @@
     "codetanzania",
     "emis",
     "emis-module",
-    "emergency",
-    "risk",
     "disaster",
     "hazard",
+    "incident",
+    "emergency",
+    "risk",
     "geojson",
     "feature",
     "point",
     "linestring",
-    "polygon"
+    "polygon",
+    "multipolygon",
+    "boundary",
+    "road",
+    "house",
+    "plant",
+    "river",
+    "drainage"
   ],
   "contributors": [
     {
@@ -46,10 +54,11 @@
     "client_secret": "",
     "urls": [
       {
-        "resource": "IncidentType",
+        "resource": "Feature",
+        "schema": "https://emis-feature.herokuapp.com/v1/features/schema",
         "link": "https://emis-feature.herokuapp.com/v1/features",
         "scopes": [
-          "feature:*"
+          "features:*"
         ],
         "methods": [
           "get",
@@ -62,33 +71,46 @@
   },
   "devDependencies": {
     "@benmaruchu/faker": "^4.2.1",
+    "@codetanzania/majifix-common": "^0.11.1",
+    "@lykmapipo/env": "^0.3.1",
+    "@lykmapipo/express-common": "^0.9.2",
+    "async": "^2.6.1",
     "chai": "^4.2.0",
+    "express": "^4.16.4",
     "grunt": "^1.0.3",
     "grunt-apidoc": "^0.11.0",
     "grunt-contrib-jshint": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-mocha-test": "^0.13.3",
     "jshint-stylish": "^2.2.1",
+    "lodash": "^4.17.11",
     "mocha": "^5.2.0",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
     "mongoose": "^5.3.7",
+    "mongoose-geojson-schemas": "^0.8.1",
+    "mongoose-rest-actions": "^0.18.2",
+    "mongoose-schema-jsonschema": "^1.1.15",
+    "mongoose-valid8": "^1.1.0",
     "sinon": "^7.1.0",
     "sinon-chai": "^3.2.0",
     "sinon-mongoose": "^2.2.1",
-    "superagent": "^4.0.0-beta.5",
     "supertest": "^3.3.0"
   },
-  "dependencies": {
-    "@codetanzania/majifix-common": "^0.11.1",
+  "peerDependencies": {
     "@lykmapipo/env": "^0.3.1",
     "@lykmapipo/express-common": "^0.9.2",
     "async": "^2.6.1",
     "express": "^4.16.4",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
-    "mongoose-locale-schema": "^0.2.1",
+    "moment-timezone": "^0.5.21",
+    "mongoose-geojson-schemas": "^0.8.1",
+    "mongoose-valid8": "^1.1.0",
     "mongoose-rest-actions": "^0.18.2",
-    "randomcolor": "^0.5.3"
+    "mongoose-schema-jsonschema": "^1.1.15"
   },
+  "dependencies": {},
   "engines": {
     "node": ">=8.11.1",
     "npm": ">=5.6.0"
