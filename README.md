@@ -6,6 +6,9 @@
 
 A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).
 
+[Demo](https://emis-feature.herokuapp.com/v1/features)
+
+
 ## Domain Model
 
 ![EMIS Feature Domain Model](https://raw.githubusercontent.com/CodeTanzania/emis-feature/develop/specifications/feature.model.png)
@@ -29,6 +32,11 @@ npm install @codetanzania/emis-feature --save
 const { app } = require('@codetanzania/emis-feature');
 app.start((error) => { ... });
 ```
+
+## Demo
+[View Demo](https://emis-feature.herokuapp.com/v1/features)
+[View apidoc](https://codetanzania.github.io/emis-feature/)
+
 
 ## Testing
 
