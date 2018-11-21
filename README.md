@@ -74,6 +74,13 @@ It will be nice, if you open an issue first so that we can know what is going on
 - [OSM - Map Features](https://wiki.openstreetmap.org/wiki/Map_Features)
 - [OSM - Features](https://wiki.openstreetmap.org/wiki/Features)
 - [Geographic Information System](https://en.wikipedia.org/wiki/Geographic_information_system)
+- [OSM - Boundary](https://wiki.openstreetmap.org/wiki/Boundaries)
+- [OSM - Boundary Administrative](https://wiki.openstreetmap.org/wiki/Tag:boundary=administrative)
+- [OSM - Place](https://wiki.openstreetmap.org/wiki/Key:place)
+- [OSM - Amenity](https://wiki.openstreetmap.org/wiki/Key:amenity)
+- [Humanitarian OSM Tags - HDM Preset](https://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset)
+- [Dar es Salaam Ramani_Huria Tags](https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria)
+- [OSM - East Africa Tagging Guidelines](https://wiki.openstreetmap.org/wiki/East_Africa_Tagging_Guidelines)
 
 
 ## License
