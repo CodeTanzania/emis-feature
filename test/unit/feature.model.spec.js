@@ -4,7 +4,7 @@
 /* dependencies */
 const path = require('path');
 const { expect } = require('chai');
-const Feature = require(path.join(__dirname, '..', '..', 'lib', 'feature.model'));
+const { Feature } = require(path.join(__dirname, '..', '..'));
 
 
 describe('Feature Instance', () => {

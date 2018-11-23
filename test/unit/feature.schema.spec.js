@@ -3,9 +3,11 @@
 
 /* dependencies */
 const path = require('path');
+const _ = require('lodash');
 const { expect } = require('chai');
 const { Schema } = require('mongoose');
-const Feature = require(path.join(__dirname, '..', '..', 'lib', 'feature.model'));
+const { Feature } = require(path.join(__dirname, '..', '..'));
+const { ADMIN_LEVEL_NAMES } = Feature;
 
 
 describe('Feature Schema', () => {
@@ -101,6 +103,63 @@ describe('Feature Schema', () => {
     expect(geometry).to.exist;
     expect(type).to.be.instanceof(Schema.Types.String);
     expect(coordinates).to.be.instanceof(Schema.Types.Array);
+  });
+
+
+  it('should have tags field', () => {
+    const tags = Feature.path('tags');
+
+    expect(tags).to.exist;
+    expect(tags).to.be.an.instanceof(Schema.Types.Array);
+    expect(tags.options).to.exist;
+    expect(tags.options).to.be.an('object');
+    expect(tags.options.type).to.exist;
+    expect(tags.options.index).to.be.true;
+    expect(tags.options.searchable).to.be.true;
+  });
+
+  it('should have continent field', () => {
+    const continent = Feature.path('continent');
+
+    expect(continent).to.exist;
+    expect(continent).to.be.an.instanceof(Schema.Types.String);
+    expect(continent.options).to.exist;
+    expect(continent.options).to.be.an('object');
+    expect(continent.options.type).to.exist;
+    expect(continent.options.trim).to.be.true;
+    expect(continent.options.index).to.be.true;
+    expect(continent.options.searchable).to.be.true;
+    expect(continent.options.fake).to.exist;
+  });
+
+  it('should have country field', () => {
+    const country = Feature.path('country');
+
+    expect(country).to.exist;
+    expect(country).to.be.an.instanceof(Schema.Types.String);
+    expect(country.options).to.exist;
+    expect(country.options).to.be.an('object');
+    expect(country.options.type).to.exist;
+    expect(country.options.trim).to.be.true;
+    expect(country.options.index).to.be.true;
+    expect(country.options.searchable).to.be.true;
+    expect(country.options.fake).to.exist;
+  });
+
+  _.forEach(ADMIN_LEVEL_NAMES, (adminLevel) => {
+    it(`should have ${adminLevel} field`, () => {
+      const _adminLevel = Feature.path(adminLevel);
+
+      expect(_adminLevel).to.exist;
+      expect(_adminLevel).to.be.an.instanceof(Schema.Types.String);
+      expect(_adminLevel.options).to.exist;
+      expect(_adminLevel.options).to.be.an('object');
+      expect(_adminLevel.options.type).to.exist;
+      expect(_adminLevel.options.trim).to.be.true;
+      expect(_adminLevel.options.index).to.be.true;
+      expect(_adminLevel.options.searchable).to.be.true;
+      expect(_adminLevel.options.fake).to.exist;
+    });
   });
 
 });

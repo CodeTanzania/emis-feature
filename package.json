@@ -107,7 +107,9 @@
     "mongoose-rest-actions": "^0.20.2",
     "mongoose-schema-jsonschema": "^1.1.15"
   },
-  "dependencies": {},
+  "dependencies": {
+    "countries-list": "^2.3.2"
+  },
   "engines": {
     "node": ">=8.11.1",
     "npm": ">=5.6.0"
