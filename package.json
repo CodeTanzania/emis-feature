@@ -108,7 +108,9 @@
     "mongoose-schema-jsonschema": "^1.1.15"
   },
   "dependencies": {
-    "countries-list": "^2.3.2"
+    "countries-list": "^2.3.2",
+    "keyword-extractor": "0.0.15",
+    "traverse": "^0.6.6"
   },
   "engines": {
     "node": ">=8.11.1",

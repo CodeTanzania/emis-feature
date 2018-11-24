@@ -21,9 +21,13 @@ describe('Feature Schema', () => {
     expect(category.options).to.be.an('object');
     expect(category.options.type).to.exist;
     expect(category.options.trim).to.be.true;
+    expect(category.options.trim).to.be.true;
     expect(category.options.enum).to.exist;
+    expect(category.options.enum).to.be.eql(Feature.CATEGORIES);
     expect(category.options.index).to.be.true;
     expect(category.options.searchable).to.be.true;
+    expect(category.options.default).to.exist;
+    expect(category.options.default).to.be.eql(Feature.DEFAULT_CATEGORY);
     expect(category.options.fake).to.be.true;
   });
 
@@ -36,9 +40,13 @@ describe('Feature Schema', () => {
     expect(type.options).to.be.an('object');
     expect(type.options.type).to.exist;
     expect(type.options.trim).to.be.true;
+    expect(type.options.trim).to.be.true;
     expect(type.options.enum).to.exist;
+    expect(type.options.enum).to.be.eql(Feature.TYPES);
     expect(type.options.index).to.be.true;
     expect(type.options.searchable).to.be.true;
+    expect(type.options.default).to.exist;
+    expect(type.options.default).to.be.eql(Feature.DEFAULT_TYPE);
     expect(type.options.fake).to.be.true;
   });
 
@@ -55,6 +63,7 @@ describe('Feature Schema', () => {
     expect(name.options.index).to.be.true;
     expect(name.options.searchable).to.be.true;
     expect(name.options.fake).to.exist;
+    expect(name.options.fake).to.be.an('object');
   });
 
   it('should have nickname field', () => {
@@ -69,6 +78,7 @@ describe('Feature Schema', () => {
     expect(nickname.options.index).to.be.true;
     expect(nickname.options.searchable).to.be.true;
     expect(nickname.options.fake).to.exist;
+    expect(nickname.options.fake).to.be.an('object');
   });
 
   it('should have about field', () => {
@@ -83,6 +93,7 @@ describe('Feature Schema', () => {
     expect(about.options.index).to.be.true;
     expect(about.options.searchable).to.be.true;
     expect(about.options.fake).to.exist;
+    expect(about.options.fake).to.be.an('object');
   });
 
   it('should have centroid field', () => {
@@ -105,6 +116,20 @@ describe('Feature Schema', () => {
     expect(coordinates).to.be.instanceof(Schema.Types.Array);
   });
 
+  it('should have properties field', () => {
+    const properties = Feature.path('properties');
+
+    expect(properties).to.exist;
+    expect(properties).to.be.an.instanceof(Schema.Types.Map);
+    expect(properties.options).to.exist;
+    expect(properties.options).to.be.an('object');
+    expect(properties.options.type).to.exist;
+    expect(properties.options.of).to.exist;
+    expect(properties.options.of.name).to.be.equal(Schema.Types.Mixed.name);
+    expect(properties.options.index).to.be.true;
+    expect(properties.options.fake).to.exist;
+    expect(properties.options.fake).to.be.an('object');
+  });
 
   it('should have tags field', () => {
     const tags = Feature.path('tags');
@@ -127,9 +152,15 @@ describe('Feature Schema', () => {
     expect(continent.options).to.be.an('object');
     expect(continent.options.type).to.exist;
     expect(continent.options.trim).to.be.true;
+    expect(continent.options.required).to.be.true;
+    expect(continent.options.enum).to.be.exist;
+    expect(continent.options.enum).to.be.eql(Feature.CONTINENTS);
     expect(continent.options.index).to.be.true;
     expect(continent.options.searchable).to.be.true;
+    expect(continent.options.default).to.exist;
+    expect(continent.options.default).to.be.eql(Feature.DEFAULT_CONTINENT_NAME);
     expect(continent.options.fake).to.exist;
+    expect(continent.options.fake).to.be.true;
   });
 
   it('should have country field', () => {
@@ -141,24 +172,31 @@ describe('Feature Schema', () => {
     expect(country.options).to.be.an('object');
     expect(country.options.type).to.exist;
     expect(country.options.trim).to.be.true;
+    expect(country.options.required).to.be.true;
+    expect(country.options.enum).to.be.exist;
+    expect(country.options.enum).to.be.eql(Feature.COUNTRIES);
     expect(country.options.index).to.be.true;
     expect(country.options.searchable).to.be.true;
+    expect(country.options.default).to.exist;
+    expect(country.options.default).to.be.eql(Feature.DEFAULT_COUNTRY_NAME);
     expect(country.options.fake).to.exist;
+    expect(country.options.fake).to.be.true;
   });
 
   _.forEach(ADMIN_LEVEL_NAMES, (adminLevel) => {
     it(`should have ${adminLevel} field`, () => {
-      const _adminLevel = Feature.path(adminLevel);
+      const boundary = Feature.path(adminLevel);
 
-      expect(_adminLevel).to.exist;
-      expect(_adminLevel).to.be.an.instanceof(Schema.Types.String);
-      expect(_adminLevel.options).to.exist;
-      expect(_adminLevel.options).to.be.an('object');
-      expect(_adminLevel.options.type).to.exist;
-      expect(_adminLevel.options.trim).to.be.true;
-      expect(_adminLevel.options.index).to.be.true;
-      expect(_adminLevel.options.searchable).to.be.true;
-      expect(_adminLevel.options.fake).to.exist;
+      expect(boundary).to.exist;
+      expect(boundary).to.be.an.instanceof(Schema.Types.String);
+      expect(boundary.options).to.exist;
+      expect(boundary.options).to.be.an('object');
+      expect(boundary.options.type).to.exist;
+      expect(boundary.options.trim).to.be.true;
+      expect(boundary.options.index).to.be.true;
+      expect(boundary.options.searchable).to.be.true;
+      expect(boundary.options.fake).to.exist;
+      expect(boundary.options.fake).to.be.an('object');
     });
   });
 

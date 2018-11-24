@@ -22,38 +22,38 @@ describe('Feature Instance', () => {
 
 describe('Feature Statics', () => {
 
-  it('should expose model name as constant', () => {
+  it('should expose model name', () => {
     expect(Feature.MODEL_NAME).to.exist;
     expect(Feature.MODEL_NAME).to.be.equal('Feature');
   });
 
-  it('should expose collection name as constant', () => {
+  it('should expose collection name', () => {
     expect(Feature.COLLECTION_NAME).to.exist;
     expect(Feature.COLLECTION_NAME).to.be.equal('features');
   });
 
-  it('should expose default category as constant', () => {
-    expect(Feature.DEFAULT_FEATURE_CATEGORY).to.exist;
-    expect(Feature.DEFAULT_FEATURE_CATEGORY).to.be.a('string');
-    expect(Feature.DEFAULT_FEATURE_CATEGORY).to.not.be.empty;
+  it('should expose default category', () => {
+    expect(Feature.DEFAULT_CATEGORY).to.exist;
+    expect(Feature.DEFAULT_CATEGORY).to.be.a('string');
+    expect(Feature.DEFAULT_CATEGORY).to.not.be.empty;
   });
 
-  it('should expose acceptable categories as constant', () => {
-    expect(Feature.FEATURE_CATEGORIES).to.exist;
-    expect(Feature.FEATURE_CATEGORIES).to.be.an('array');
-    expect(Feature.FEATURE_CATEGORIES).to.have.length.at.least(1);
+  it('should expose acceptable categories', () => {
+    expect(Feature.CATEGORIES).to.exist;
+    expect(Feature.CATEGORIES).to.be.an('array');
+    expect(Feature.CATEGORIES).to.have.length.at.least(1);
   });
 
-  it('should expose default feature type as constant', () => {
-    expect(Feature.DEFAULT_FEATURE_TYPE).to.exist;
-    expect(Feature.DEFAULT_FEATURE_TYPE).to.be.a('string');
-    expect(Feature.DEFAULT_FEATURE_TYPE).to.not.be.empty;
+  it('should expose default feature type', () => {
+    expect(Feature.DEFAULT_TYPE).to.exist;
+    expect(Feature.DEFAULT_TYPE).to.be.a('string');
+    expect(Feature.DEFAULT_TYPE).to.not.be.empty;
   });
 
-  it('should expose acceptable feature types as constant', () => {
-    expect(Feature.FEATURE_TYPES).to.exist;
-    expect(Feature.FEATURE_TYPES).to.be.an('array');
-    expect(Feature.FEATURE_TYPES).to.have.length.at.least(1);
+  it('should expose acceptable feature types', () => {
+    expect(Feature.TYPES).to.exist;
+    expect(Feature.TYPES).to.be.an('array');
+    expect(Feature.TYPES).to.have.length.at.least(1);
   });
 
 });
