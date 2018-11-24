@@ -1,0 +1,21 @@
+# 1.0.0 / 24-11-2018
+- Add seeds into examples
+- Simplify example app bootup
+- Improve tag generate to handle non array value set on tags
+- Add Feature upsert static method
+- Add Feature seed static method
+- Implement Feature upsert specs
+- Implement Feature seed specs
+- Review Feature schema
+- Improve schema field properties
+- Improve feature schema unit specs
+- Re-model Feature class
+- Re-Implment new Feature model
+- Improve unit spec for new Feature model fields
+- Add demo link on usage doc
+- Clear unused dependencies
+- Add feature initial schema
+- Add feature initial http router
+- Add feature unit specs
+- Add feature integration specs
+- Improve domain model for administrative boundaries

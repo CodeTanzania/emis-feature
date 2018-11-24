@@ -1,0 +1,41 @@
+{
+  "name": "emis-feature",
+  "description": "A representation of geographical feature of interest both natural and man made used in emergency management(or event).",
+  "repository": "https://github.com/CodeTanzania/emis-feature.git",
+  "keywords": [
+    "codetanzania",
+    "emis",
+    "emis-module",
+    "disaster",
+    "hazard",
+    "incident",
+    "emergency",
+    "risk",
+    "geojson",
+    "feature",
+    "point",
+    "linestring",
+    "polygon",
+    "multipolygon",
+    "boundary",
+    "road",
+    "house",
+    "plant",
+    "river",
+    "drainage"
+  ],
+  "addons": [
+    "mongolab"
+  ],
+  "env":
+  {
+    "NPM_CONFIG_PRODUCTION":
+    {
+      "value": "false"
+    },
+    "YARN_PRODUCTION":
+    {
+      "value": "false"
+    }
+  }
+}
