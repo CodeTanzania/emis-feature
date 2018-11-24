@@ -50,6 +50,25 @@ describe('Feature Schema', () => {
     expect(type.options.fake).to.be.true;
   });
 
+  it('should have level field', () => {
+    const level = Feature.path('level');
+
+    expect(level).to.exist;
+    expect(level).to.be.an.instanceof(Schema.Types.String);
+    expect(level.options).to.exist;
+    expect(level.options).to.be.an('object');
+    expect(level.options.type).to.exist;
+    expect(level.options.trim).to.be.true;
+    expect(level.options.trim).to.be.true;
+    expect(level.options.enum).to.exist;
+    expect(level.options.enum).to.be.eql(Feature.LEVELS);
+    expect(level.options.index).to.be.true;
+    expect(level.options.searchable).to.be.true;
+    expect(level.options.default).to.exist;
+    expect(level.options.default).to.be.eql(Feature.DEFAULT_LEVEL);
+    expect(level.options.fake).to.be.true;
+  });
+
   it('should have name field', () => {
     const name = Feature.path('name');
 
