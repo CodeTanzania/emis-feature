@@ -1,6 +1,6 @@
 define({
   "name": "Feature",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).",
   "title": "EMIS - Feature",
   "url": "https://emis-feature.herokuapp.com/v1",
@@ -13,7 +13,7 @@ define({
   "apidoc": "0.3.0",
   "generator": {
     "name": "apidoc",
-    "time": "2018-11-24T10:31:06.045Z",
+    "time": "2018-11-24T10:32:55.861Z",
     "url": "http://apidocjs.com",
     "version": "0.17.6"
   }

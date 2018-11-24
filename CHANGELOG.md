@@ -1,3 +1,6 @@
+# 1.0.1 / 24-11-2018
+- Fix apidoc
+
 # 1.0.0 / 24-11-2018
 - Add seeds into examples
 - Simplify example app bootup
