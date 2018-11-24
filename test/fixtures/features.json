@@ -1,0 +1,33 @@
+[
+{
+  "category": "Man made",
+  "type": "Other",
+  "name": "Boyle Road",
+  "nickname": "Virginia",
+  "about": "Optio aut facere molestiae rerum.",
+  "geometry":
+  {
+    "type": "MultiPoint",
+    "coordinates": [
+      [-67.24271265311961, 34.117895904085074],
+      [-67.36155003768448, 54.8679288823794]
+    ]
+  },
+  "properties":
+  {
+    "name": "Estelle Waelchi",
+    "username": "Stacy45",
+    "email": "Alysson43@gmail.com",
+    "phone": "(838) 575-8379 x8773",
+    "website": "garnett.name"
+  },
+  "continent": "Africa",
+  "country": "Puerto Rico",
+  "zone": "Hettinger Islands",
+  "region": "Rohanton",
+  "district": "Buckinghamshire",
+  "division": "Legros River",
+  "ward": "New Everardo",
+  "village": "Berkshire",
+  "shina": "Lauriane Village"
+}]
