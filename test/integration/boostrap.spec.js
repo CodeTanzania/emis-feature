@@ -1,31 +1,23 @@
 'use strict';
 
 
+/* ensure test env */
+process.env.NODE_ENV = 'test';
+process.env.MONGODB_URI =
+  (process.env.MONGODB_URI || 'mongodb://localhost/emis-features');
+
+
 /* dependencies */
-const mongoose = require('mongoose');
-const MONGODB_URI = 'mongodb://localhost/emis-feature';
-const CONNECTION_OPTION = { useNewUrlParser: true };
+const { connect, clear, drop } = require('@lykmapipo/mongoose-test-helpers');
 
 
-/* wipe test database instance */
-function wipe(done) {
-  if (mongoose.connection && mongoose.connection.dropDatabase) {
-    mongoose.connection.dropDatabase(done);
-  } else {
-    done();
-  }
-}
+/* setup database */
+before((done) => connect(done));
 
 
-/* setup test database instance */
-before(function (done) {
-  mongoose.connect(MONGODB_URI, CONNECTION_OPTION, done);
-});
+/* clear database */
+before((done) => clear(done));
 
 
-/* clear test database instance */
-before(wipe);
-
-
-/* clear test database instance */
-after(wipe);
+/* drop database */
+after((done) => drop(done));
