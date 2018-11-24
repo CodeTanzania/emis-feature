@@ -540,7 +540,7 @@
             "group": "Success 200",
             "type": "String",
             "optional": true,
-            "field": "level",
+            "field": "data.level",
             "defaultValue": "other",
             "description": "<p>Human readable administrative level of a feature.</p>"
           },
