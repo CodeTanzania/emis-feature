@@ -4,9 +4,11 @@
 /* dependencies */
 const path = require('path');
 const _ = require('lodash');
-const { expect } = require('chai');
+const { include } = require('@lykmapipo/include');
 const { clear } = require('@lykmapipo/mongoose-test-helpers');
-const { Feature } = require(path.join(__dirname, '..', '..'));
+const { expect } = require('chai');
+const { Feature } = include(__dirname, '..', '..');
+
 
 describe('Feature Seed', () => {
 

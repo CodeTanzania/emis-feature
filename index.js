@@ -29,14 +29,12 @@
 
 
 /* dependencies */
-const path = require('path');
 const _ = require('lodash');
+const { include } = require('@lykmapipo/include');
 const app = require('@lykmapipo/express-common');
-const pkg = require(path.join(__dirname, 'package.json'));
-const mongoose = require('mongoose');
-require('mongoose-schema-jsonschema')(mongoose);
-const Feature = require(path.join(__dirname, 'lib', 'feature.model'));
-const featureRouter = require(path.join(__dirname, 'lib', 'feature.http.router'));
+const pkg = include(__dirname, 'package.json');
+const Feature = include(__dirname, 'lib', 'feature.model');
+const featureRouter = include(__dirname, 'lib', 'feature.http.router');
 
 
 /**

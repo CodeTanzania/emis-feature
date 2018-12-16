@@ -2,11 +2,10 @@
 
 
 /* dependencies */
-const path = require('path');
 const request = require('supertest');
+const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
-const { Feature, apiVersion, app } = require(path.join(__dirname, '..', '..'));
-
+const { Feature, apiVersion, app } = include(__dirname, '..', '..');
 
 describe('Feature Rest API', function () {
 
