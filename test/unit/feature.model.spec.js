@@ -10,11 +10,21 @@ const { Feature } = require(path.join(__dirname, '..', '..'));
 describe('Feature Instance', () => {
 
   it('`preValidate` should be a function', () => {
-    const party = Feature.fake();
-    expect(party.preValidate).to.exist;
-    expect(party.preValidate).to.be.a('function');
-    expect(party.preValidate.length).to.be.equal(1);
-    expect(party.preValidate.name).to.be.equal('preValidate');
+    const feature = Feature.fake();
+    expect(feature.preValidate).to.exist;
+    expect(feature.preValidate).to.be.a('function');
+    expect(feature.preValidate.length).to.be.equal(1);
+    expect(feature.preValidate.name).to.be.equal('preValidate');
+  });
+
+  it('should have tag function', () => {
+    const feature = Feature.fake();
+    expect(feature.tag).to.exist;
+    expect(feature.tag).to.be.a('function');
+
+    feature.tag('mountain');
+    expect(feature.tags).to.exist;
+    expect(feature.tags).to.include('mountain');
   });
 
 });

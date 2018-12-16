@@ -9,29 +9,28 @@ process.env.MONGODB_URI =
 /* dependencies */
 const path = require('path');
 const async = require('async');
-const mongoose = require('mongoose');
-const {
-  Feature,
-  info,
-  app
-} = require(path.join(__dirname, '..'));
+const { include } = require('@lykmapipo/include');
+const { connect } = require('@lykmapipo/mongoose-common');
+const { Feature, info, app } = include(__dirname, '..');
 
 
-/* establish mongodb connection */
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
+// establish mongodb connection
+connect((error) => {
 
+  // seed features
+  Feature.seed((error, results) => {
 
-Feature.seed((error, results) => {
+    // expose module info
+    app.get('/', (request, response) => {
+      response.status(200);
+      response.json(info);
+    });
 
-  /* expose module info */
-  app.get('/', function (request, response) {
-    response.status(200);
-    response.json(info);
-  });
+    // fire the app
+    app.start((error, env) => {
+      console.log(`visit http://0.0.0.0:${env.PORT}`);
+    });
 
-  /* fire the app */
-  app.start(function (error, env) {
-    console.log(`visit http://0.0.0.0:${env.PORT}`);
   });
 
 });

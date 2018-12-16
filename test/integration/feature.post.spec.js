@@ -2,9 +2,9 @@
 
 
 /* dependencies */
-const path = require('path');
+const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
-const { Feature } = require(path.join(__dirname, '..', '..'));
+const { Feature } = include(__dirname, '..', '..');
 
 
 describe('Feature Static Post', () => {
@@ -30,6 +30,7 @@ describe('Feature Static Post', () => {
   });
 
 });
+
 
 describe('Feature Instance Post', () => {
 
