@@ -1,9 +1,14 @@
+# 1.1.0 / 16-12-2018
+- Build latest api doc
+- Add taggable behaviour 
+- Force latest dependencies & audit fix
+- Fixes #10
+
 # 1.0.2 / 06-12-2018
 - Build latest api doc
 - Update peerDependencies to use >= compactibility
 - Improve package main export jsdoc
 - Force latest dependencies
-
 
 # 1.0.1 / 24-11-2018
 - Fix apidoc
