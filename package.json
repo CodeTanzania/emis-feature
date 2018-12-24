@@ -72,7 +72,7 @@
   "devDependencies": {
     "@benmaruchu/faker": ">=4.2.1",
     "@codetanzania/majifix-common": "^0.11.1",
-    "@lykmapipo/mongoose-test-helpers": "^0.2.3",
+    "@lykmapipo/mongoose-test-helpers": ">=0.2.4",
     "chai": "^4.2.0",
     "grunt": "^1.0.3",
     "grunt-apidoc": "^0.11.0",
@@ -91,15 +91,15 @@
     "mongoose": ">=5.4.0"
   },
   "dependencies": {
-    "@lykmapipo/env": ">=0.3.2",
-    "@lykmapipo/express-common": ">=0.9.4",
-    "@lykmapipo/include": ">=0.1.0",
-    "@lykmapipo/mongoose-common": ">=0.4.0",
+    "@lykmapipo/env": ">=0.3.3",
+    "@lykmapipo/express-common": ">=0.10.0",
+    "@lykmapipo/include": ">=0.1.1",
+    "@lykmapipo/mongoose-common": ">=0.4.2",
     "async": ">=2.6.1",
     "countries-list": ">=2.3.2",
     "lodash": ">=4.17.11",
     "mongoose-geojson-schemas": ">=0.8.2",
-    "mongoose-rest-actions": ">=0.22.1"
+    "mongoose-rest-actions": ">=0.22.3"
   },
   "engines": {
     "node": ">=8.11.1",

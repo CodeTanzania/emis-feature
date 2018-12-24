@@ -2,12 +2,11 @@
 
 
 /* dependencies */
-const path = require('path');
 const _ = require('lodash');
+const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
 const { Schema } = require('mongoose');
-const { Feature } = require(path.join(__dirname, '..', '..'));
-const { ADMIN_LEVEL_NAMES } = Feature;
+const { Feature, ADMIN_LEVEL_NAMES } = include(__dirname, '..', '..');
 
 
 describe('Feature Schema', () => {
