@@ -5,13 +5,12 @@
 const request = require('supertest');
 const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
+const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { Feature, apiVersion, app } = include(__dirname, '..', '..');
 
 describe('Feature Rest API', function () {
 
-  before((done) => {
-    Feature.deleteMany(done);
-  });
+  before((done) => clear(done));
 
   let feature = Feature.fake();
 
@@ -150,8 +149,6 @@ describe('Feature Rest API', function () {
       });
   });
 
-  after((done) => {
-    Feature.deleteMany(done);
-  });
+  after((done) => clear(done));
 
 });

@@ -4,14 +4,13 @@
 /* dependencies */
 const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
+const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { Feature } = include(__dirname, '..', '..');
 
 
 describe('Feature Static Patch', () => {
 
-  before((done) => {
-    Feature.deleteMany(done);
-  });
+  before((done) => clear(done));
 
   let feature = Feature.fake();
 
@@ -44,18 +43,14 @@ describe('Feature Static Patch', () => {
     });
   });
 
-  after((done) => {
-    Feature.deleteMany(done);
-  });
+  after((done) => clear(done));
 
 });
 
 
 describe('Feature Instance Patch', () => {
 
-  before((done) => {
-    Feature.deleteMany(done);
-  });
+  before((done) => clear(done));
 
   let feature = Feature.fake();
 
@@ -86,8 +81,6 @@ describe('Feature Instance Patch', () => {
     });
   });
 
-  after((done) => {
-    Feature.deleteMany(done);
-  });
+  after((done) => clear(done));
 
 });
