@@ -91,7 +91,7 @@
     "mongoose": ">=5.4.1"
   },
   "dependencies": {
-    "@lykmapipo/common": ">=0.1.0",
+    "@lykmapipo/common": ">=0.2.0",
     "@lykmapipo/env": ">=0.3.3",
     "@lykmapipo/express-common": ">=0.10.0",
     "@lykmapipo/include": ">=0.2.0",

@@ -29,10 +29,9 @@
 
 
 /* dependencies */
-const _ = require('lodash');
+const { pkg } = require('@lykmapipo/common');
 const { include } = require('@lykmapipo/include');
 const app = require('@lykmapipo/express-common');
-const pkg = include(__dirname, 'package.json');
 const Feature = include(__dirname, 'lib', 'feature.model');
 const featureRouter = include(__dirname, 'lib', 'feature.http.router');
 
@@ -46,10 +45,10 @@ const featureRouter = include(__dirname, 'lib', 'feature.http.router');
  * @since 1.0.0
  * @version 0.1.0
  */
-exports.info = _.merge({}, _.pick(pkg, [
+exports.info = pkg(
   'name', 'description', 'version', 'license',
   'homepage', 'repository', 'bugs', 'sandbox', 'contributors'
-]));
+);
 
 
 /**
