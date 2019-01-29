@@ -42,16 +42,10 @@ describe('Feature Statics', () => {
     expect(Feature.COLLECTION_NAME).to.be.equal('features');
   });
 
-  it('should expose default category', () => {
-    expect(Feature.DEFAULT_CATEGORY).to.exist;
-    expect(Feature.DEFAULT_CATEGORY).to.be.a('string');
-    expect(Feature.DEFAULT_CATEGORY).to.not.be.empty;
-  });
-
-  it('should expose acceptable categories', () => {
-    expect(Feature.CATEGORIES).to.exist;
-    expect(Feature.CATEGORIES).to.be.an('array');
-    expect(Feature.CATEGORIES).to.have.length.at.least(1);
+  it('should expose acceptable groups', () => {
+    expect(Feature.GROUPS).to.exist;
+    expect(Feature.GROUPS).to.be.an('array');
+    expect(Feature.GROUPS).to.have.length.at.least(1);
   });
 
   it('should expose default feature type', () => {

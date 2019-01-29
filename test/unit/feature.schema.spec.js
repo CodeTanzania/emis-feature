@@ -11,23 +11,22 @@ const { Feature, ADMIN_LEVEL_NAMES } = include(__dirname, '..', '..');
 
 describe('Feature Schema', () => {
 
-  it('should have category field', () => {
-    const category = Feature.path('category');
+  it('should have group field', () => {
+    const group = Feature.path('group');
 
-    expect(category).to.exist;
-    expect(category).to.be.an.instanceof(Schema.Types.String);
-    expect(category.options).to.exist;
-    expect(category.options).to.be.an('object');
-    expect(category.options.type).to.exist;
-    expect(category.options.trim).to.be.true;
-    expect(category.options.trim).to.be.true;
-    expect(category.options.enum).to.exist;
-    expect(category.options.enum).to.be.eql(Feature.CATEGORIES);
-    expect(category.options.index).to.be.true;
-    expect(category.options.searchable).to.be.true;
-    expect(category.options.default).to.exist;
-    expect(category.options.default).to.be.eql(Feature.DEFAULT_CATEGORY);
-    expect(category.options.fake).to.be.true;
+    expect(group).to.exist;
+    expect(group).to.be.an.instanceof(Schema.Types.String);
+    expect(group.options).to.exist;
+    expect(group.options).to.be.an('object');
+    expect(group.options.type).to.exist;
+    expect(group.options.trim).to.be.true;
+    expect(group.options.trim).to.be.true;
+    expect(group.options.enum).to.exist;
+    expect(group.options.enum).to.be.eql(Feature.GROUPS);
+    expect(group.options.index).to.be.true;
+    expect(group.options.searchable).to.be.true;
+    expect(group.options.default).to.not.exist;
+    expect(group.options.fake).to.be.true;
   });
 
   it('should have type field', () => {
