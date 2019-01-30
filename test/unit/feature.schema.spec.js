@@ -11,22 +11,41 @@ const { Feature, ADMIN_LEVEL_NAMES } = include(__dirname, '..', '..');
 
 describe('Feature Schema', () => {
 
-  it('should have group field', () => {
-    const group = Feature.path('group');
+  it('should have nature field', () => {
+    const nature = Feature.path('nature');
 
-    expect(group).to.exist;
-    expect(group).to.be.an.instanceof(Schema.Types.String);
-    expect(group.options).to.exist;
-    expect(group.options).to.be.an('object');
-    expect(group.options.type).to.exist;
-    expect(group.options.trim).to.be.true;
-    expect(group.options.trim).to.be.true;
-    expect(group.options.enum).to.exist;
-    expect(group.options.enum).to.be.eql(Feature.GROUPS);
-    expect(group.options.index).to.be.true;
-    expect(group.options.searchable).to.be.true;
-    expect(group.options.default).to.not.exist;
-    expect(group.options.fake).to.be.true;
+    expect(nature).to.exist;
+    expect(nature).to.be.an.instanceof(Schema.Types.String);
+    expect(nature.options).to.exist;
+    expect(nature.options).to.be.an('object');
+    expect(nature.options.type).to.exist;
+    expect(nature.options.trim).to.be.true;
+    expect(nature.options.trim).to.be.true;
+    expect(nature.options.enum).to.exist;
+    expect(nature.options.enum).to.be.eql(Feature.GROUPS);
+    expect(nature.options.index).to.be.true;
+    expect(nature.options.searchable).to.be.true;
+    expect(nature.options.default).to.not.exist;
+    expect(nature.options.fake).to.be.true;
+  });
+
+  it('should have family field', () => {
+    const family = Feature.path('family');
+
+    expect(family).to.exist;
+    expect(family).to.be.an.instanceof(Schema.Types.String);
+    expect(family.options).to.exist;
+    expect(family.options).to.be.an('object');
+    expect(family.options.type).to.exist;
+    expect(family.options.trim).to.be.true;
+    expect(family.options.trim).to.be.true;
+    expect(family.options.enum).to.exist;
+    expect(family.options.enum).to.be.eql(Feature.TYPES);
+    expect(family.options.index).to.be.true;
+    expect(family.options.searchable).to.be.true;
+    expect(family.options.default).to.exist;
+    expect(family.options.default).to.be.eql(Feature.DEFAULT_TYPE);
+    expect(family.options.fake).to.be.true;
   });
 
   it('should have type field', () => {
@@ -46,25 +65,6 @@ describe('Feature Schema', () => {
     expect(type.options.default).to.exist;
     expect(type.options.default).to.be.eql(Feature.DEFAULT_TYPE);
     expect(type.options.fake).to.be.true;
-  });
-
-  it('should have level field', () => {
-    const level = Feature.path('level');
-
-    expect(level).to.exist;
-    expect(level).to.be.an.instanceof(Schema.Types.String);
-    expect(level.options).to.exist;
-    expect(level.options).to.be.an('object');
-    expect(level.options.type).to.exist;
-    expect(level.options.trim).to.be.true;
-    expect(level.options.trim).to.be.true;
-    expect(level.options.enum).to.exist;
-    expect(level.options.enum).to.be.eql(Feature.LEVELS);
-    expect(level.options.index).to.be.true;
-    expect(level.options.searchable).to.be.true;
-    expect(level.options.default).to.exist;
-    expect(level.options.default).to.be.eql(Feature.DEFAULT_LEVEL);
-    expect(level.options.fake).to.be.true;
   });
 
   it('should have name field', () => {
@@ -142,10 +142,27 @@ describe('Feature Schema', () => {
     expect(properties.options).to.be.an('object');
     expect(properties.options.type).to.exist;
     expect(properties.options.of).to.exist;
-    expect(properties.options.of.name).to.be.equal(Schema.Types.Mixed.name);
+    expect(properties.options.of.name).to.be.equal('String');
     expect(properties.options.index).to.be.true;
+    expect(properties.options.taggable).to.be.true;
     expect(properties.options.fake).to.exist;
     expect(properties.options.fake).to.be.an('object');
+  });
+
+  it('should have place field', () => {
+    const place = Feature.path('place');
+
+    expect(place).to.exist;
+    expect(place).to.be.an.instanceof(Schema.Types.Map);
+    expect(place.options).to.exist;
+    expect(place.options).to.be.an('object');
+    expect(place.options.type).to.exist;
+    expect(place.options.of).to.exist;
+    expect(place.options.of.name).to.be.equal('String');
+    expect(place.options.index).to.be.true;
+    expect(place.options.taggable).to.be.true;
+    expect(place.options.default).to.exist;
+    expect(place.options.fake).to.be.true;
   });
 
   it('should have tags field', () => {
@@ -158,46 +175,6 @@ describe('Feature Schema', () => {
     expect(tags.options.type).to.exist;
     expect(tags.options.index).to.be.true;
     expect(tags.options.searchable).to.be.true;
-  });
-
-  it('should have continent field', () => {
-    const continent = Feature.path('continent');
-
-    expect(continent).to.exist;
-    expect(continent).to.be.an.instanceof(Schema.Types.String);
-    expect(continent.options).to.exist;
-    expect(continent.options).to.be.an('object');
-    expect(continent.options.type).to.exist;
-    expect(continent.options.trim).to.be.true;
-    expect(continent.options.required).to.be.true;
-    expect(continent.options.enum).to.be.exist;
-    expect(continent.options.enum).to.be.eql(Feature.CONTINENTS);
-    expect(continent.options.index).to.be.true;
-    expect(continent.options.searchable).to.be.true;
-    expect(continent.options.default).to.exist;
-    expect(continent.options.default).to.be.eql(Feature.DEFAULT_CONTINENT_NAME);
-    expect(continent.options.fake).to.exist;
-    expect(continent.options.fake).to.be.true;
-  });
-
-  it('should have country field', () => {
-    const country = Feature.path('country');
-
-    expect(country).to.exist;
-    expect(country).to.be.an.instanceof(Schema.Types.String);
-    expect(country.options).to.exist;
-    expect(country.options).to.be.an('object');
-    expect(country.options.type).to.exist;
-    expect(country.options.trim).to.be.true;
-    expect(country.options.required).to.be.true;
-    expect(country.options.enum).to.be.exist;
-    expect(country.options.enum).to.be.eql(Feature.COUNTRIES);
-    expect(country.options.index).to.be.true;
-    expect(country.options.searchable).to.be.true;
-    expect(country.options.default).to.exist;
-    expect(country.options.default).to.be.eql(Feature.DEFAULT_COUNTRY_NAME);
-    expect(country.options.fake).to.exist;
-    expect(country.options.fake).to.be.true;
   });
 
   _.forEach(ADMIN_LEVEL_NAMES, (adminLevel) => {
