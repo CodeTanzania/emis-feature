@@ -2,11 +2,10 @@
 
 
 /* dependencies */
-const _ = require('lodash');
 const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
 const { Schema } = require('mongoose');
-const { Feature, ADMIN_LEVEL_NAMES } = include(__dirname, '..', '..');
+const { Feature } = include(__dirname, '..', '..');
 
 
 describe('Feature Schema', () => {
@@ -22,10 +21,11 @@ describe('Feature Schema', () => {
     expect(nature.options.trim).to.be.true;
     expect(nature.options.trim).to.be.true;
     expect(nature.options.enum).to.exist;
-    expect(nature.options.enum).to.be.eql(Feature.GROUPS);
+    expect(nature.options.enum).to.be.eql(Feature.NATURES);
     expect(nature.options.index).to.be.true;
     expect(nature.options.searchable).to.be.true;
-    expect(nature.options.default).to.not.exist;
+    expect(nature.options.default).to.exist;
+    expect(nature.options.default).to.be.eql(Feature.DEFAULT_NATURE);
     expect(nature.options.fake).to.be.true;
   });
 
@@ -40,11 +40,11 @@ describe('Feature Schema', () => {
     expect(family.options.trim).to.be.true;
     expect(family.options.trim).to.be.true;
     expect(family.options.enum).to.exist;
-    expect(family.options.enum).to.be.eql(Feature.TYPES);
+    expect(family.options.enum).to.be.eql(Feature.FAMILIES);
     expect(family.options.index).to.be.true;
     expect(family.options.searchable).to.be.true;
     expect(family.options.default).to.exist;
-    expect(family.options.default).to.be.eql(Feature.DEFAULT_TYPE);
+    expect(family.options.default).to.be.eql(Feature.DEFAULT_FAMILY);
     expect(family.options.fake).to.be.true;
   });
 
@@ -175,23 +175,6 @@ describe('Feature Schema', () => {
     expect(tags.options.type).to.exist;
     expect(tags.options.index).to.be.true;
     expect(tags.options.searchable).to.be.true;
-  });
-
-  _.forEach(ADMIN_LEVEL_NAMES, (adminLevel) => {
-    it(`should have ${adminLevel} field`, () => {
-      const boundary = Feature.path(adminLevel);
-
-      expect(boundary).to.exist;
-      expect(boundary).to.be.an.instanceof(Schema.Types.String);
-      expect(boundary.options).to.exist;
-      expect(boundary.options).to.be.an('object');
-      expect(boundary.options.type).to.exist;
-      expect(boundary.options.trim).to.be.true;
-      expect(boundary.options.index).to.be.true;
-      expect(boundary.options.searchable).to.be.true;
-      expect(boundary.options.fake).to.exist;
-      expect(boundary.options.fake).to.be.an('object');
-    });
   });
 
 });
