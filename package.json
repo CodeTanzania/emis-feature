@@ -1,6 +1,6 @@
 {
   "name": "@codetanzania/emis-feature",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).",
   "main": "index.js",
   "scripts": {
@@ -81,14 +81,14 @@
     "grunt-mocha-test": "^0.13.3",
     "jshint-stylish": "^2.2.1",
     "mocha": "^5.2.0",
-    "mongoose": ">=5.4.7",
+    "mongoose": ">=5.4.8",
     "sinon": "^7.2.3",
     "sinon-chai": "^3.3.0",
     "sinon-mongoose": "^2.2.1",
     "supertest": "^3.4.2"
   },
   "peerDependencies": {
-    "mongoose": ">=5.4.7"
+    "mongoose": ">=5.4.8"
   },
   "dependencies": {
     "@lykmapipo/common": ">=0.5.0",
