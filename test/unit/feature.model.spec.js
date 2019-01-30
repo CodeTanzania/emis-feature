@@ -42,16 +42,28 @@ describe('Feature Statics', () => {
     expect(Feature.COLLECTION_NAME).to.be.equal('features');
   });
 
-  it('should expose default category', () => {
-    expect(Feature.DEFAULT_CATEGORY).to.exist;
-    expect(Feature.DEFAULT_CATEGORY).to.be.a('string');
-    expect(Feature.DEFAULT_CATEGORY).to.not.be.empty;
+  it('should expose default feature nature', () => {
+    expect(Feature.DEFAULT_NATURE).to.exist;
+    expect(Feature.DEFAULT_NATURE).to.be.a('string');
+    expect(Feature.DEFAULT_NATURE).to.not.be.empty;
   });
 
-  it('should expose acceptable categories', () => {
-    expect(Feature.CATEGORIES).to.exist;
-    expect(Feature.CATEGORIES).to.be.an('array');
-    expect(Feature.CATEGORIES).to.have.length.at.least(1);
+  it('should expose acceptable natures', () => {
+    expect(Feature.NATURES).to.exist;
+    expect(Feature.NATURES).to.be.an('array');
+    expect(Feature.NATURES).to.have.length.at.least(1);
+  });
+
+  it('should expose default feature family', () => {
+    expect(Feature.DEFAULT_FAMILY).to.exist;
+    expect(Feature.DEFAULT_FAMILY).to.be.a('string');
+    expect(Feature.DEFAULT_FAMILY).to.not.be.empty;
+  });
+
+  it('should expose acceptable families', () => {
+    expect(Feature.FAMILIES).to.exist;
+    expect(Feature.FAMILIES).to.be.an('array');
+    expect(Feature.FAMILIES).to.have.length.at.least(1);
   });
 
   it('should expose default feature type', () => {

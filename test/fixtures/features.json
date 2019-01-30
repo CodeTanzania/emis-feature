@@ -1,7 +1,7 @@
 [
 {
-  "category": "Man made",
-  "type": "Other",
+  "nature": "Highway",
+  "family": "Road",
   "name": "Boyle Road",
   "nickname": "Virginia",
   "about": "Optio aut facere molestiae rerum.",
@@ -21,13 +21,16 @@
     "phone": "(838) 575-8379 x8773",
     "website": "garnett.name"
   },
-  "continent": "Africa",
-  "country": "Puerto Rico",
-  "zone": "Hettinger Islands",
-  "region": "Rohanton",
-  "district": "Buckinghamshire",
-  "division": "Legros River",
-  "ward": "New Everardo",
-  "village": "Berkshire",
-  "shina": "Lauriane Village"
+  "place":
+  {
+    "continent": "Africa",
+    "country": "Puerto Rico",
+    "zone": "Hettinger Islands",
+    "region": "Rohanton",
+    "district": "Buckinghamshire",
+    "division": "Legros River",
+    "ward": "New Everardo",
+    "village": "Berkshire",
+    "kitongoji": "Lauriane Village"
+  }
 }]

@@ -1,11 +1,6 @@
 'use strict';
 
 
-/* ensure mongodb uri */
-process.env.MONGODB_URI =
-  (process.env.MONGODB_URI || 'mongodb://localhost/emis-feature');
-
-
 /* dependencies */
 const path = require('path');
 const async = require('async');
@@ -15,10 +10,16 @@ const { Feature, info, app } = include(__dirname, '..');
 
 
 // establish mongodb connection
-connect((error) => {
+connect(error => {
+
+  // re-throw if error
+  if (error) { throw error; }
 
   // seed features
   Feature.seed((error, results) => {
+
+    // re-throw if error
+    if (error) { throw error; }
 
     // expose module info
     app.get('/', (request, response) => {
@@ -28,6 +29,10 @@ connect((error) => {
 
     // fire the app
     app.start((error, env) => {
+      // re-throw if error
+      if (error) { throw error; }
+
+      // start http server
       console.log(`visit http://0.0.0.0:${env.PORT}`);
     });
 
