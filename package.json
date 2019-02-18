@@ -39,11 +39,13 @@
     "river",
     "drainage"
   ],
-  "contributors": [{
-    "name": "lykmapipo",
-    "email": "lallyelias87@gmail.com",
-    "url": "https://github.com/lykmapipo"
-  }],
+  "contributors": [
+    {
+      "name": "lykmapipo",
+      "email": "lallyelias87@gmail.com",
+      "url": "https://github.com/lykmapipo"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodeTanzania/emis-feature/issues",
@@ -55,20 +57,22 @@
     "apiDoc": "https://codetanzania.github.io/emis-feature/",
     "client_id": "",
     "client_secret": "",
-    "urls": [{
-      "resource": "Feature",
-      "schema": "https://emis-feature.herokuapp.com/v1/features/schema",
-      "link": "https://emis-feature.herokuapp.com/v1/features",
-      "scopes": [
-        "features:*"
-      ],
-      "methods": [
-        "get",
-        "post",
-        "put",
-        "patch"
-      ]
-    }]
+    "urls": [
+      {
+        "resource": "Feature",
+        "schema": "https://emis-feature.herokuapp.com/v1/features/schema",
+        "link": "https://emis-feature.herokuapp.com/v1/features",
+        "scopes": [
+          "features:*"
+        ],
+        "methods": [
+          "get",
+          "post",
+          "put",
+          "patch"
+        ]
+      }
+    ]
   },
   "devDependencies": {
     "@benmaruchu/faker": ">=4.2.1",

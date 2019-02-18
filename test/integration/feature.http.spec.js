@@ -8,15 +8,15 @@ const { expect } = require('chai');
 const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { Feature, apiVersion, app } = include(__dirname, '..', '..');
 
-describe('Feature Rest API', function () {
+describe('Feature Rest API', () => {
 
-  before((done) => clear(done));
+  before(done => clear(done));
 
   let feature = Feature.fake();
 
-  it('should handle HTTP POST on /features', (done) => {
+  it('should handle HTTP POST on /features', done => {
     request(app)
-      .post(`/v${apiVersion}/features`)
+      .post(`/${apiVersion}/features`)
       .set('Accept', 'application/json')
       .set('Content-Type', 'application/json')
       .send(feature)
@@ -38,9 +38,9 @@ describe('Feature Rest API', function () {
       });
   });
 
-  it('should handle HTTP GET on /features', (done) => {
+  it('should handle HTTP GET on /features', done => {
     request(app)
-      .get(`/v${apiVersion}/features`)
+      .get(`/${apiVersion}/features`)
       .set('Accept', 'application/json')
       .expect(200)
       .expect('Content-Type', /json/)
@@ -62,9 +62,9 @@ describe('Feature Rest API', function () {
       });
   });
 
-  it('should handle HTTP GET on /features/id:', (done) => {
+  it('should handle HTTP GET on /features/id:', done => {
     request(app)
-      .get(`/v${apiVersion}/features/${feature._id}`)
+      .get(`/${apiVersion}/features/${feature._id}`)
       .set('Accept', 'application/json')
       .expect(200)
       .end((error, response) => {
@@ -81,10 +81,10 @@ describe('Feature Rest API', function () {
       });
   });
 
-  it('should handle HTTP PATCH on /features/id:', (done) => {
+  it('should handle HTTP PATCH on /features/id:', done => {
     const { name } = feature.fakeOnly('name');
     request(app)
-      .patch(`/v${apiVersion}/features/${feature._id}`)
+      .patch(`/${apiVersion}/features/${feature._id}`)
       .set('Accept', 'application/json')
       .set('Content-Type', 'application/json')
       .send({ name })
@@ -106,10 +106,10 @@ describe('Feature Rest API', function () {
       });
   });
 
-  it('should handle HTTP PUT on /features/id:', (done) => {
+  it('should handle HTTP PUT on /features/id:', done => {
     const { name } = feature.fakeOnly('name');
     request(app)
-      .put(`/v${apiVersion}/features/${feature._id}`)
+      .put(`/${apiVersion}/features/${feature._id}`)
       .set('Accept', 'application/json')
       .set('Content-Type', 'application/json')
       .send({ name })
@@ -131,9 +131,9 @@ describe('Feature Rest API', function () {
       });
   });
 
-  it('should handle HTTP DELETE on /features/:id', (done) => {
+  it('should handle HTTP DELETE on /features/:id', done => {
     request(app)
-      .delete(`/v${apiVersion}/features/${feature._id}`)
+      .delete(`/${apiVersion}/features/${feature._id}`)
       .set('Accept', 'application/json')
       .expect(200)
       .end((error, response) => {
@@ -149,6 +149,6 @@ describe('Feature Rest API', function () {
       });
   });
 
-  after((done) => clear(done));
+  after(done => clear(done));
 
 });

@@ -31,6 +31,7 @@
 /* dependencies */
 const { pkg } = require('@lykmapipo/common');
 const { include } = require('@lykmapipo/include');
+const { apiVersion } = require('@lykmapipo/env');
 const app = require('@lykmapipo/express-common');
 const Feature = include(__dirname, 'lib', 'feature.model');
 const featureRouter = include(__dirname, 'lib', 'feature.http.router');
@@ -84,7 +85,7 @@ exports.featureRouter = featureRouter;
  * @since 1.0.0
  * @version 0.1.0
  */
-exports.apiVersion = featureRouter.apiVersion;
+exports.apiVersion = apiVersion();
 
 
 /* export app */
