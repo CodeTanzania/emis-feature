@@ -1,3 +1,17 @@
+#### 1.3.0 (2019-02-18)
+
+##### Refactors
+
+*  extract seed to independent script ([ea413ed8](https://github.com/CodeTanzania/emis-feature/commit/ea413ed8778311b2735972a3f77216705b5efb67))
+
+##### Code Style Changes
+
+*  improve apidoc ([d7b8a17b](https://github.com/CodeTanzania/emis-feature/commit/d7b8a17b5d74462fdfe2d4c3e1cfa3693eb85bde))
+
+##### Tests
+
+*  fix http specs for apiVersion updates ([1c519bf3](https://github.com/CodeTanzania/emis-feature/commit/1c519bf39bb79853a865082db2a7a6b720508b47))
+
 #### 1.2.0 (2019-01-30)
 
 ##### Refactors
