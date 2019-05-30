@@ -32,7 +32,7 @@
 const { pkg } = require('@lykmapipo/common');
 const { include } = require('@lykmapipo/include');
 const { apiVersion } = require('@lykmapipo/env');
-const app = require('@lykmapipo/express-common');
+const { app, mount } = require('@lykmapipo/express-common');
 const Feature = include(__dirname, 'lib', 'feature.model');
 const featureRouter = include(__dirname, 'lib', 'feature.http.router');
 
@@ -92,7 +92,7 @@ exports.apiVersion = apiVersion();
 Object.defineProperty(exports, 'app', {
   get() {
     /* @todo bind oauth middlewares authenticate, token, authorize */
-    app.mount(featureRouter);
+    mount(featureRouter);
     return app;
   }
 });
