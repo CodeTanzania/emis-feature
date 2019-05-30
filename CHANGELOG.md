@@ -1,3 +1,12 @@
+#### 1.4.0 (2019-05-30)
+
+##### Chores
+
+* **deps:**
+  *  refactor to use latest api ([737b79eb](https://github.com/CodeTanzania/emis-feature/commit/737b79eb4ecec9bc6e0a1030ad1f333e5551ec41))
+  *  force latest version & audit fix ([03157231](https://github.com/CodeTanzania/emis-feature/commit/03157231cf565dd004c9ff28b825731ff01f0ae3))
+*  force latest dependencies ([dfbab800](https://github.com/CodeTanzania/emis-feature/commit/dfbab8005e83befc03a3b095b8f121a233de802f))
+
 #### 1.3.0 (2019-02-18)
 
 ##### Refactors
