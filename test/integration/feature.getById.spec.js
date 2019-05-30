@@ -63,8 +63,8 @@ describe('Feature getById', () => {
     const feature = Feature.fake();
     Feature.getById(feature._id, (error, found) => {
       expect(error).to.exist;
-      expect(error.status).to.exist;
-      expect(error.message).to.be.equal('Not Found');
+      // expect(error.status).to.exist;
+      expect(error.name).to.be.equal('DocumentNotFoundError');
       expect(found).to.not.exist;
       done();
     });
