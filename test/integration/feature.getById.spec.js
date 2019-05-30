@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* dependencies */
 const _ = require('lodash');
 const { include } = require('@lykmapipo/include');
@@ -8,21 +7,19 @@ const { expect } = require('chai');
 const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { Feature } = include(__dirname, '..', '..');
 
-
 describe('Feature getById', () => {
-
-  before((done) => clear(done));
+  before(done => clear(done));
 
   let feature = Feature.fake();
 
-  before((done) => {
+  before(done => {
     feature.post((error, created) => {
       feature = created;
       done(error, created);
     });
   });
 
-  it('should be able to get an instance', (done) => {
+  it('should be able to get an instance', done => {
     Feature.getById(feature._id, (error, found) => {
       expect(error).to.not.exist;
       expect(found).to.exist;
@@ -31,10 +28,10 @@ describe('Feature getById', () => {
     });
   });
 
-  it('should be able to get with options', (done) => {
+  it('should be able to get with options', done => {
     const options = {
       _id: feature._id,
-      select: 'name'
+      select: 'name',
     };
 
     Feature.getById(options, (error, found) => {
@@ -46,20 +43,16 @@ describe('Feature getById', () => {
       //...assert selection
       const fields = _.keys(found.toObject());
       expect(fields).to.have.length(2);
-      _.map([
-        'centroid',
-        'geometry',
-        'createdAt',
-        'updatedAt'
-      ], function (field) {
+      _.map(['centroid', 'geometry', 'createdAt', 'updatedAt'], function(
+        field
+      ) {
         expect(fields).to.not.include(field);
       });
       done(error, found);
     });
-
   });
 
-  it('should throw if not exists', (done) => {
+  it('should throw if not exists', done => {
     const feature = Feature.fake();
     Feature.getById(feature._id, (error, found) => {
       expect(error).to.exist;
@@ -70,6 +63,5 @@ describe('Feature getById', () => {
     });
   });
 
-  after((done) => clear(done));
-
+  after(done => clear(done));
 });

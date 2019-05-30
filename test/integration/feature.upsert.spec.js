@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* dependencies */
 const faker = require('@benmaruchu/faker');
 const { clear } = require('@lykmapipo/mongoose-test-helpers');
@@ -8,14 +7,12 @@ const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
 const { Feature } = include(__dirname, '..', '..');
 
-
 describe('Feature Upsert', () => {
-
   before(done => clear('Feature', done));
 
   let feature;
 
-  beforeEach((done) => {
+  beforeEach(done => {
     feature = Feature.fakeExcept('about');
     feature.post((error, created) => {
       feature = created;
@@ -23,7 +20,7 @@ describe('Feature Upsert', () => {
     });
   });
 
-  it('should be able upsert non existing', (done) => {
+  it('should be able upsert non existing', done => {
     Feature.upsert(feature, (error, upserted) => {
       expect(error).to.not.exist;
       expect(upserted).to.exist;
@@ -33,10 +30,10 @@ describe('Feature Upsert', () => {
     });
   });
 
-  it('should be able upsert existing by _id', (done) => {
+  it('should be able upsert existing by _id', done => {
     const updates = {
       _id: feature._id,
-      about: faker.lorem.sentence()
+      about: faker.lorem.sentence(),
     };
     Feature.upsert(updates, (error, upserted) => {
       expect(error).to.not.exist;
@@ -50,10 +47,10 @@ describe('Feature Upsert', () => {
     });
   });
 
-  it('should be able upsert existing by fields', (done) => {
+  it('should be able upsert existing by fields', done => {
     const updates = {
       name: feature.name,
-      about: faker.lorem.sentence()
+      about: faker.lorem.sentence(),
     };
     Feature.upsert(updates, (error, upserted) => {
       expect(error).to.not.exist;
@@ -68,5 +65,4 @@ describe('Feature Upsert', () => {
   });
 
   after(done => clear('Feature', done));
-
 });

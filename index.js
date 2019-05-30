@@ -1,6 +1,5 @@
 'use strict';
 
-
 /**
  * @module Feature
  * @name Feature
@@ -27,7 +26,6 @@
  *
  */
 
-
 /* dependencies */
 const { pkg } = require('@lykmapipo/common');
 const { include } = require('@lykmapipo/include');
@@ -35,7 +33,6 @@ const { apiVersion } = require('@lykmapipo/env');
 const { app, mount } = require('@lykmapipo/express-common');
 const Feature = include(__dirname, 'lib', 'feature.model');
 const featureRouter = include(__dirname, 'lib', 'feature.http.router');
-
 
 /**
  * @name info
@@ -47,10 +44,16 @@ const featureRouter = include(__dirname, 'lib', 'feature.http.router');
  * @version 0.1.0
  */
 exports.info = pkg(
-  'name', 'description', 'version', 'license',
-  'homepage', 'repository', 'bugs', 'sandbox', 'contributors'
+  'name',
+  'description',
+  'version',
+  'license',
+  'homepage',
+  'repository',
+  'bugs',
+  'sandbox',
+  'contributors'
 );
-
 
 /**
  * @name Feature
@@ -63,7 +66,6 @@ exports.info = pkg(
  */
 exports.Feature = Feature;
 
-
 /**
  * @name featureRouter
  * @description feature http router
@@ -74,7 +76,6 @@ exports.Feature = Feature;
  * @version 0.1.0
  */
 exports.featureRouter = featureRouter;
-
 
 /**
  * @name apiVersion
@@ -87,12 +88,11 @@ exports.featureRouter = featureRouter;
  */
 exports.apiVersion = apiVersion();
 
-
 /* export app */
 Object.defineProperty(exports, 'app', {
   get() {
     /* @todo bind oauth middlewares authenticate, token, authorize */
     mount(featureRouter);
     return app;
-  }
+  },
 });

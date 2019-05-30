@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* dependencies */
 const request = require('supertest');
 const { include } = require('@lykmapipo/include');
@@ -9,7 +8,6 @@ const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { Feature, apiVersion, app } = include(__dirname, '..', '..');
 
 describe('Feature Rest API', () => {
-
   before(done => clear(done));
 
   let feature = Feature.fake();
@@ -150,5 +148,4 @@ describe('Feature Rest API', () => {
   });
 
   after(done => clear(done));
-
 });
