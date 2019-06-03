@@ -1,3 +1,20 @@
+#### 1.4.1 (2019-06-03)
+
+##### Chores
+
+* **deps:**  force latest version & audit fix ([367bd6d9](https://github.com/CodeTanzania/emis-feature/commit/367bd6d9295cc8edb001b41b1cd17404b1d83760))
+* **.gitignore:**  add files to be ignored ([06b5ac44](https://github.com/CodeTanzania/emis-feature/commit/06b5ac44f8075f1b2c4205e7550d3048ab14b47d))
+*  install and configure prettier ([8aa6884d](https://github.com/CodeTanzania/emis-feature/commit/8aa6884d5af42e3b13aafa07c1d4dc6ca52e6f9d))
+*  ignore neovim editor configs ([a0906836](https://github.com/CodeTanzania/emis-feature/commit/a090683643a97a4220cc395bde7078d3dc2c0a32))
+
+##### Refactors
+
+* **model:**  re-implement seed to use new API ([7ed2ec0e](https://github.com/CodeTanzania/emis-feature/commit/7ed2ec0ee7576d09cd4ac0d867b9ae6814ae6395))
+
+##### Code Style Changes
+
+*  format files with prettier ([eb5812c4](https://github.com/CodeTanzania/emis-feature/commit/eb5812c439592c1b698cada6f474501a0bff169e))
+
 #### 1.4.0 (2019-05-30)
 
 ##### Chores
