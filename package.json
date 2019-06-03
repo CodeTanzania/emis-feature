@@ -1,6 +1,6 @@
 {
   "name": "@codetanzania/emis-feature",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).",
   "main": "index.js",
   "scripts": {
