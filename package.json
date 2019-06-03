@@ -1,6 +1,6 @@
 {
   "name": "@codetanzania/emis-feature",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A representation of geographical feature of interest(i.e mapped physical element with their attributes in landscape e.g. administrative boundaries, roads, buildings etc) both natural and man made used in emergency(or disaster) management(or event).",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "doc": "grunt doc",
     "dev": "npm run seed && npm run start",
     "start": "BASE_PATH=./examples node ./examples/app.js",
-    "seed": "BASE_PATH=./examples node ./examples/seed.js"
+    "seed": "BASE_PATH=./examples node ./examples/seed.js",
+    "format": "prettier --write \"{lib,test,.}/**/*.js\" --loglevel silent"
   },
   "repository": {
     "type": "git",
@@ -77,7 +78,7 @@
   "devDependencies": {
     "@benmaruchu/faker": ">=4.2.1",
     "@codetanzania/majifix-common": "^0.12.4",
-    "@lykmapipo/mongoose-test-helpers": ">=0.7.4",
+    "@lykmapipo/mongoose-test-helpers": ">=0.7.6",
     "chai": "^4.2.0",
     "grunt": "^1.0.4",
     "grunt-apidoc": "^0.11.0",
@@ -86,19 +87,20 @@
     "grunt-mocha-test": "^0.13.3",
     "jshint-stylish": "^2.2.1",
     "mocha": "^6.1.4",
-    "mongoose": ">=5.5.11",
+    "mongoose": ">=5.5.12",
+    "prettier": "^1.17.1",
     "supertest": "^4.0.2"
   },
   "peerDependencies": {
-    "mongoose": ">=5.5.11"
+    "mongoose": ">=5.5.12"
   },
   "dependencies": {
-    "@lykmapipo/common": ">=0.19.0",
+    "@lykmapipo/common": ">=0.19.1",
     "@lykmapipo/constants": ">=0.3.6",
-    "@lykmapipo/env": ">=0.7.8",
-    "@lykmapipo/express-common": ">=0.17.3",
+    "@lykmapipo/env": ">=0.7.9",
+    "@lykmapipo/express-common": ">=0.17.4",
     "@lykmapipo/include": ">=0.2.4",
-    "@lykmapipo/mongoose-common": ">=0.23.4",
+    "@lykmapipo/mongoose-common": ">=0.23.6",
     "async": ">=3.0.1",
     "countries-list": ">=2.4.2",
     "lodash": ">=4.17.11",

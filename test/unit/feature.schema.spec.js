@@ -1,15 +1,12 @@
 'use strict';
 
-
 /* dependencies */
 const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
 const { Schema } = require('mongoose');
 const { Feature } = include(__dirname, '..', '..');
 
-
 describe('Feature Schema', () => {
-
   it('should have nature field', () => {
     const nature = Feature.path('nature');
 
@@ -176,5 +173,4 @@ describe('Feature Schema', () => {
     expect(tags.options.index).to.be.true;
     expect(tags.options.searchable).to.be.true;
   });
-
 });

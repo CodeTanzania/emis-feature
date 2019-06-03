@@ -1,20 +1,17 @@
 'use strict';
 
-
 /* dependencies */
 const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
 const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { Feature } = include(__dirname, '..', '..');
 
-
 describe('Feature Static Post', () => {
-
-  before((done) => clear(done));
+  before(done => clear(done));
 
   let feature = Feature.fake();
 
-  it('should be able to post', (done) => {
+  it('should be able to post', done => {
     Feature.post(feature, (error, created) => {
       expect(error).to.not.exist;
       expect(created).to.exist;
@@ -24,18 +21,15 @@ describe('Feature Static Post', () => {
     });
   });
 
-  after((done) => clear(done));
-
+  after(done => clear(done));
 });
 
-
 describe('Feature Instance Post', () => {
-
-  before((done) => clear(done));
+  before(done => clear(done));
 
   let feature = Feature.fake();
 
-  it('should be able to post', (done) => {
+  it('should be able to post', done => {
     feature.post((error, created) => {
       expect(error).to.not.exist;
       expect(created).to.exist;
@@ -45,6 +39,5 @@ describe('Feature Instance Post', () => {
     });
   });
 
-  after((done) => clear(done));
-
+  after(done => clear(done));
 });

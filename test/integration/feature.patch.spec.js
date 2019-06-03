@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* dependencies */
 const _ = require('lodash');
 const { include } = require('@lykmapipo/include');
@@ -8,21 +7,19 @@ const { expect } = require('chai');
 const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { Feature } = include(__dirname, '..', '..');
 
-
 describe('Feature Static Patch', () => {
-
-  before((done) => clear(done));
+  before(done => clear(done));
 
   let feature = Feature.fake();
 
-  before((done) => {
+  before(done => {
     feature.post((error, created) => {
       feature = created;
       done(error, created);
     });
   });
 
-  it('should be able to patch', (done) => {
+  it('should be able to patch', done => {
     feature = feature.fakeOnly('name');
     Feature.patch(feature._id, feature, (error, updated) => {
       expect(error).to.not.exist;
@@ -33,7 +30,7 @@ describe('Feature Static Patch', () => {
     });
   });
 
-  it('should throw if not exists', (done) => {
+  it('should throw if not exists', done => {
     const fake = Feature.fake().toObject();
     Feature.patch(fake._id, _.omit(fake, '_id'), (error, updated) => {
       expect(error).to.exist;
@@ -44,25 +41,22 @@ describe('Feature Static Patch', () => {
     });
   });
 
-  after((done) => clear(done));
-
+  after(done => clear(done));
 });
 
-
 describe('Feature Instance Patch', () => {
-
-  before((done) => clear(done));
+  before(done => clear(done));
 
   let feature = Feature.fake();
 
-  before((done) => {
+  before(done => {
     feature.post((error, created) => {
       feature = created;
       done(error, created);
     });
   });
 
-  it('should be able to patch', (done) => {
+  it('should be able to patch', done => {
     feature = feature.fakeOnly('name');
     feature.patch((error, updated) => {
       expect(error).to.not.exist;
@@ -73,7 +67,7 @@ describe('Feature Instance Patch', () => {
     });
   });
 
-  it('should throw if not exists', (done) => {
+  it('should throw if not exists', done => {
     feature.patch((error, updated) => {
       expect(error).to.not.exist;
       expect(updated).to.exist;
@@ -82,6 +76,5 @@ describe('Feature Instance Patch', () => {
     });
   });
 
-  after((done) => clear(done));
-
+  after(done => clear(done));
 });

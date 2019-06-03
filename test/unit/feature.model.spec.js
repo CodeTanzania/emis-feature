@@ -1,14 +1,11 @@
 'use strict';
 
-
 /* dependencies */
 const { include } = require('@lykmapipo/include');
 const { expect } = require('chai');
 const { Feature } = include(__dirname, '..', '..');
 
-
 describe('Feature Instance', () => {
-
   it('`preValidate` should be a function', () => {
     const feature = Feature.fake();
     expect(feature.preValidate).to.exist;
@@ -26,12 +23,9 @@ describe('Feature Instance', () => {
     expect(feature.tags).to.exist;
     expect(feature.tags).to.include('mountain');
   });
-
 });
 
-
 describe('Feature Statics', () => {
-
   it('should expose model name', () => {
     expect(Feature.MODEL_NAME).to.exist;
     expect(Feature.MODEL_NAME).to.be.equal('Feature');
@@ -77,5 +71,4 @@ describe('Feature Statics', () => {
     expect(Feature.TYPES).to.be.an('array');
     expect(Feature.TYPES).to.have.length.at.least(1);
   });
-
 });

@@ -1,6 +1,5 @@
 'use strict';
 
-
 /* dependencies */
 const path = require('path');
 const _ = require('lodash');
@@ -9,9 +8,7 @@ const { clear } = require('@lykmapipo/mongoose-test-helpers');
 const { expect } = require('chai');
 const { Feature } = include(__dirname, '..', '..');
 
-
 describe('Feature Seed', () => {
-
   const SEEDS_PATH = process.env.SEEDS_PATH;
 
   before(done => clear('Feature', done));
@@ -20,7 +17,7 @@ describe('Feature Seed', () => {
     process.env.SEEDS_PATH = path.join(__dirname, '..', 'fixtures');
   });
 
-  it('should be able to seed from environment', (done) => {
+  it('should be able to seed from environment', done => {
     Feature.seed((error, seeded) => {
       expect(error).to.not.exist;
       expect(seeded).to.exist;
@@ -30,7 +27,7 @@ describe('Feature Seed', () => {
     });
   });
 
-  it('should not throw if seed from environment exist', (done) => {
+  it('should not throw if seed from environment exist', done => {
     Feature.seed((error, seeded) => {
       expect(error).to.not.exist;
       expect(seeded).to.exist;
@@ -45,5 +42,4 @@ describe('Feature Seed', () => {
   after(() => {
     process.env.SEEDS_PATH = SEEDS_PATH;
   });
-
 });
