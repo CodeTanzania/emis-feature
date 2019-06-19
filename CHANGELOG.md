@@ -1,3 +1,13 @@
+#### 1.4.2 (2019-06-19)
+
+##### Chores
+
+* **deps:**  force latest version & audit fix ([3eac045c](https://github.com/CodeTanzania/emis-feature/commit/3eac045c74777f26b46828c033e376a24d8497fd))
+
+##### Code Style Changes
+
+*  prettify codes ([096903dc](https://github.com/CodeTanzania/emis-feature/commit/096903dc5a5f73f4a7c047392bbb72ec2644e83d))
+
 #### 1.4.1 (2019-06-03)
 
 ##### Chores
