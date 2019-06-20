@@ -1,3 +1,9 @@
+#### 1.4.3 (2019-06-20)
+
+##### Bug Fixes
+
+*  restore sseed strategy ([b24293c6](https://github.com/CodeTanzania/emis-feature/commit/b24293c6d53ec074e8281095688a4faed6a9f134))
+
 #### 1.4.2 (2019-06-19)
 
 ##### Chores
